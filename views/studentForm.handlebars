@@ -1,0 +1,33 @@
+<h1>Student Form</h1>
+
+<form action="/saveStudent" method="post">
+  <label for="firstName">First Name</label>
+  <input type="text" id="firstName" name="firstName" value="{{student.firstName}}" />
+  <div class="fieldError">{{errors.firstName.message}}</div>
+  <br />
+
+  <label for="lastName">Last Name</label>
+  <input type="text" id="lastName" name="lastName" value="{{student.lastName}}" />
+  <div class="fieldError">{{errors.lastName.message}}</div>
+  <br />
+
+  <label for="gpa">GPA</label>
+  <input type="text" id="gpa" name="gpa" value="{{student.gpa}}" />
+  <div class="fieldError">{{errors.gpa.message}}</div>
+  <br />
+
+  <label for="city">City</label>
+  <input type="text" id="city" name="city" value="{{student.location.city}}" />
+  <div class="fieldError">{{errors.location.city.message}}</div>
+
+  <label for="state">State</label>
+  <input type="text" id="state" name="state" value="{{student.location.state}}" />
+  <div class="fieldError">{{errors.location.state.message}}</div>
+  <br />
+
+  {{#if student._id}}
+    <input type="hidden" name="id" value="{{student._id}}" />
+  {{/if}}
+
+  <button class="button-primary">Save Student</button>
+</form>

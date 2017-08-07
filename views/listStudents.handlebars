@@ -1,0 +1,24 @@
+<h1>List Students</h1>
+
+<table border="1">
+  <tr>
+    <th>
+      Name
+    </th>
+    <th>
+      GPA
+    </th>
+    <th>
+      Location
+    </th>
+  </tr>
+  {{#students}}
+  <tr>
+    <td><a href="/studentForm?id={{_id}}">{{firstName}} {{lastName}}</a></td>
+    <td>{{gpa}}</td>
+    <td>{{#location}} {{city}}, {{state}} {{/location}}</td>
+    <td><a href="/deleteStudent/?id={{_id}}">Delete</a></td>
+  </tr>
+  {{/students}}
+
+</table>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Students{{#if title}} | {{title}}{{/if}}</title>
+  </head>
+  <body>
+    <header>
+      <h1>Students</h1>
+
+      <nav>
+        <a class="button" href="/">My Students</a>
+        <a class="button" href="/studentForm">New Student</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      {{{body}}}
+    </div>
+  </body>
+</html>
