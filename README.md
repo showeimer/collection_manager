@@ -2,4 +2,4 @@
 
 How to download database:
 
-mongoimport --db sho --collection students --file students.json
+mongoimport --db newdb --collection students --file students.json
